@@ -53,251 +53,110 @@
         <table>
             <tr>
                 <th></th>
-                <th>Uncoded</th>
-                <th>Opus@6&thinsp;kbps</th>
-                <th>Opus@10&thinsp;kbps</th>
-                <th>EnCodec@1.5&thinsp;kbps</th>
-                <th>EnCodec@6&thinsp;kbps</th>
-                <th>Lyra&thinsp;v2@3.2&thinsp;kbps</th>
-                <th>Lyra&thinsp;v2@6&thinsp;kbps</th>
-                <th>Proposed@1.38&thinsp;kbps <br>fine-tuned</th>
-                <th>Proposed@5.51&thinsp;kbps <br>fine-tuned</th>
-                <th>Proposed@1.38&thinsp;kbps <br>fine-tuned (16kHz)</th>
-                <th>Proposed@5.51&thinsp;kbps <br>fine-tuned (16kHz)</th>
-                <!-- <th>Proposed@1.38&thinsp;kbps</th>
-                <th>Proposed@5.51&thinsp;kbps</th> -->
-
-            
+                <th>Clean</th>
+                <th>FFT</th>
+                <th>GriffinLim</th>
+                <th>HiFiGAN</th>
+                <th>BigVGAN tiny</th>
+                <th>BigVGAN base</th>
+    
                 <tr>
-                    <th align="left"> p229</th>
+                    <th align="left"> p237</th>
     
                     <td><audio controls style="width: 130px;">
                             <source src="rendered/p229.flac" type="audio/flac">
                         </audio></td>
                     <td><audio controls style="width: 130px;">
                             <source src="rendered/p229_opus6.flac" type="audio/flac">
-    
                         </audio></td>
                     <td><audio controls style="width: 130px;">
                             <source src="rendered/p229_opus10.flac" type="audio/flac">
                         </audio></td>
-    
-    
                     <td><audio controls style="width: 130px;">
                             <source src="rendered/p229_encodec1.5.flac" type="audio/flac">
-    
                         </audio></td>
                     <td><audio controls style="width: 130px;">
                             <source src="rendered/p229_encodec6.flac" type="audio/flac">
-    
                         </audio></td>
                     <td><audio controls style="width: 130px;">
                             <source src="rendered/p229_lyra3.2.flac" type="audio/flac">
-    
-                        </audio></td>
-                    <td><audio controls style="width: 130px;">
-                            <source src="rendered/p229_lyra6.flac" type="audio/flac">
-    
-                        </audio></td>
-    
-                    <td style="background-color: grey;"><audio controls style="width: 130px;">
-                            <source src="rendered/p229_var16bit_finetuned.flac" type="audio/flac">
-                        </audio></td>
-                    <td style="background-color: grey;"><audio controls style="width: 130px;">
-                            <source src="rendered/p229_var64bit_finetuned.flac" type="audio/flac">
-                        </audio></td>
-                        <td style="background-color: grey;"><audio controls style="width: 130px;">
-                            <source src="rendered/p229_var16bit_finetuned_16kHz.flac" type="audio/flac">
-                        </audio></td>
-                    <td style="background-color: grey;"><audio controls style="width: 130px;">
-                            <source src="rendered/p229_var64bit_finetuned_16kHz.flac" type="audio/flac">
-                        </audio></td>
-    
-                    <!-- <td><audio controls style="width: 130px;">
-                            <source src="rendered/p229_var16bit_bigvgan_tiny_causal.flac" type="audio/flac">
-                        </audio></td>
-                    <td><audio controls style="width: 130px;">
-                            <source src="rendered/p229_var64bit_bigvgan_tiny_causal.flac" type="audio/flac">
-                        </audio></td>
-     -->
+                        </audio></td>   
+                    <!-- <td style="background-color: grey;"><audio controls style="width: 130px;">
+                            <source src="rendered/p229_var16bit_finetuned.flac" type="audio/flac"> -->
                 </tr>
                 
                 <tr>
-                    <th align="left"> p230</th>
+                    <th align="left"> p247</th>
     
                     <td><audio controls style="width: 130px;">
                             <source src="rendered/p230.flac" type="audio/flac">
                         </audio></td>
                     <td><audio controls style="width: 130px;">
                             <source src="rendered/p230_opus6.flac" type="audio/flac">
-    
                         </audio></td>
                     <td><audio controls style="width: 130px;">
                             <source src="rendered/p230_opus10.flac" type="audio/flac">
                         </audio></td>
-    
-    
                     <td><audio controls style="width: 130px;">
                             <source src="rendered/p230_encodec1.5.flac" type="audio/flac">
-    
                         </audio></td>
                     <td><audio controls style="width: 130px;">
                             <source src="rendered/p230_encodec6.flac" type="audio/flac">
-    
                         </audio></td>
                     <td><audio controls style="width: 130px;">
                             <source src="rendered/p230_lyra3.2.flac" type="audio/flac">
-    
-                        </audio></td>
-                    <td><audio controls style="width: 130px;">
-                            <source src="rendered/p230_lyra6.flac" type="audio/flac">
-    
-                        </audio></td>
-    
-                    <td style="background-color: grey;"><audio controls style="width: 130px;">
-                            <source src="rendered/p230_var16bit_finetuned.flac" type="audio/flac">
-                        </audio></td>
-                    <td style="background-color: grey;"><audio controls style="width: 130px;">
-                            <source src="rendered/p230_var64bit_finetuned.flac" type="audio/flac">
-                        </audio></td>
-                    <td style="background-color: grey;"><audio controls style="width: 130px;">
-                            <source src="rendered/p230_var16bit_finetuned_16kHz.flac" type="audio/flac">
-                        </audio></td>
-                    <td style="background-color: grey;"><audio controls style="width: 130px;">
-                            <source src="rendered/p230_var64bit_finetuned_16kHz.flac" type="audio/flac">
-                        </audio></td>
-    
-                    <!-- <td><audio controls style="width: 130px;">
-                            <source src="rendered/p230_var16bit_bigvgan_tiny_causal.flac" type="audio/flac">
-                        </audio></td>
-                    <td><audio controls style="width: 130px;">
-                            <source src="rendered/p230_var64bit_bigvgan_tiny_causal.flac" type="audio/flac">
-                        </audio></td>
-     -->
-    
+                        </audio></td>    
                 </tr>
 
 
             <tr>
-                <th align="left"> p232</th>
+                <th align="left"> p283</th>
 
                 <td><audio controls style="width: 130px;">
                         <source src="rendered/p232.flac" type="audio/flac">
                     </audio></td>
                 <td><audio controls style="width: 130px;">
                         <source src="rendered/p232_opus6.flac" type="audio/flac">
-
                     </audio></td>
                 <td><audio controls style="width: 130px;">
                         <source src="rendered/p232_opus10.flac" type="audio/flac">
                     </audio></td>
-
-
                 <td><audio controls style="width: 130px;">
                         <source src="rendered/p232_encodec1.5.flac" type="audio/flac">
-
                     </audio></td>
                 <td><audio controls style="width: 130px;">
                         <source src="rendered/p232_encodec6.flac" type="audio/flac">
-
                     </audio></td>
                 <td><audio controls style="width: 130px;">
                         <source src="rendered/p232_lyra3.2.flac" type="audio/flac">
-
                     </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p232_lyra6.flac" type="audio/flac">
-
-                    </audio></td>
-
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p232_var16bit_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p232_var64bit_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p232_var16bit_finetuned_16kHz.flac" type="audio/flac">
-                    </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p232_var64bit_finetuned_16kHz.flac" type="audio/flac">
-                    </audio></td>
-
-                <!-- <td><audio controls style="width: 130px;">
-                        <source src="rendered/p232_var16bit_bigvgan_tiny_causal.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p232_var64bit_bigvgan_tiny_causal.flac" type="audio/flac">
-                    </audio></td>
- -->
-
             </tr>
 
 
-
-
-
-
             <tr>
-                <th align="left"> p237</th>
+                <th align="left"> p335</th>
 
                 <td><audio controls style="width: 130px;">
                         <source src="rendered/p237.flac" type="audio/flac">
                     </audio></td>
                 <td><audio controls style="width: 130px;">
                         <source src="rendered/p237_opus6.flac" type="audio/flac">
-
                     </audio></td>
                 <td><audio controls style="width: 130px;">
                         <source src="rendered/p237_opus10.flac" type="audio/flac">
                     </audio></td>
-
-
                 <td><audio controls style="width: 130px;">
                         <source src="rendered/p237_encodec1.5.flac" type="audio/flac">
-
                     </audio></td>
                 <td><audio controls style="width: 130px;">
                         <source src="rendered/p237_encodec6.flac" type="audio/flac">
-
                     </audio></td>
                 <td><audio controls style="width: 130px;">
                         <source src="rendered/p237_lyra3.2.flac" type="audio/flac">
-
                     </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p237_lyra6.flac" type="audio/flac">
-
-                    </audio></td>
-
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p237_var16bit_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p237_var64bit_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p237_var16bit_finetuned_16kHz.flac" type="audio/flac">
-                    </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p237_var64bit_finetuned_16kHz.flac" type="audio/flac">
-                    </audio></td>
-
-
-                <!-- <td><audio controls style="width: 130px;">
-                        <source src="rendered/p237_var16bit_bigvgan_tiny_causal.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p237_var64bit_bigvgan_tiny_causal.flac" type="audio/flac">
-                    </audio></td> -->
-
-
             </tr>
 
-            
-
-
-
+        
         </table>
     </font>
 
@@ -472,7 +331,7 @@
 
 
     <br>
-    <p>Created by Benjamin Stahl and Simon Windtner, IEM, 2024. For questions please contact stahl@iem.at</p>
+    <p>Created by Simon Windtner, IEM, 2024. For questions please contact windtner@iem.at</p>
 </body>
 
 </html>
