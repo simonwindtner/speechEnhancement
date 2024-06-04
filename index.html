@@ -2,7 +2,7 @@
 <html>
 
 <body>
-    <p>
+    <!-- <p>
         With the hyper-parameterization used for this demo, the proposed coding method's
     <ul>
         <li><b>algorithmic delay</b> only depends on the spectrogram window size and amounts to <b>768 samples at
@@ -10,13 +10,13 @@
         <li>The <b>computational complexity at the encoding end</b> is <b>2.02&thinsp;GMAC/s</b>.</li>
         <li>The <b>computational complexity at the decoding end</b> is <b>3.50&thinsp;GMAC/s</b>.</li>.
     </ul>
-    </p>
+    </p> -->
 
 
 
     <h2>Audio Examples</h2>
-    <h3>Comparison to SOTA Codecs</h3>
-    <p>
+    <h3>Clean Audio Synthesis</h3>
+    <!-- <p>
         Here you can listen to the audio samples reconstructed from the proposed codec at <b>1.38&thinsp;kbps</b> and
         <b>5.51&thinsp;kbps</b> on utterances by four different speakers (unseen during training) from the <b>VCTK
             dataset</b>.<br>
@@ -43,7 +43,7 @@
         Audio Codec," in IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 30, 495-507.<br>
         [5] J.-M. Valin, G. Maxwell, T. B. Terriberry and K. Vos. 2013. High-quality, low-delay music coding in the Opus
         codec. In Proc. 135th Audio Engineering Society Convention, 1–10.
-    </font>
+    </font> -->
     <br>
     <br>
 
@@ -79,7 +79,7 @@
                             <source src="files/p237_262_bigvgan_tiny.wav" type="audio/flac">
                         </audio></td>
                     <td><audio controls style="width: 250px;">
-                            <source src="files/p229_lyra3.2.flac" type="audio/flac">
+                            <source src="files/p237_262_bigvgan_base.wav" type="audio/flac">
                         </audio></td>   
                     <!-- <td style="background-color: grey;"><audio controls style="width: 130px;">
                             <source src="rendered/p229_var16bit_finetuned.flac" type="audio/flac"> -->
@@ -104,7 +104,7 @@
                             <source src="files/p247_374_bigvgan_tiny.wav" type="audio/wav">
                         </audio></td>
                     <td><audio controls style="width: 250px;">
-                            <source src="files/p230_lyra3.2.flac" type="audio/wav">
+                            <source src="files/p247_374_bigvgan_base.wav" type="audio/wav">
                         </audio></td>    
                 </tr>
 
@@ -128,7 +128,7 @@
                             <source src="files/p283_423_bigvgan_tiny.wav" type="audio/wav">
                         </audio></td>
                     <td><audio controls style="width: 250px;">
-                            <source src="files/p232_lyra3.2.flac" type="audio/wav">
+                            <source src="files/p283_423_bigvgan_base.wav" type="audio/wav">
                         </audio></td>
             </tr>
 
@@ -152,7 +152,7 @@
                             <source src="files/p335_342_bigvgan_tiny.wav" type="audio/wav">
                         </audio></td>
                     <td><audio controls style="width: 250px;">
-                            <source src="files/p237_lyra3.2.flac" type="audio/wav">
+                            <source src="ffiles/p283_423_bigvgan_base.wav" type="audio/wav">
                         </audio></td>
             </tr>
 
@@ -162,8 +162,8 @@
 
 
 
-    <h3>Fixed vs. Variable Bitrate and Comparison to VQ baseline</h3>
-    <p>
+    <h3>Noisy MEL Coefficients</h3>
+    <!-- <p>
         The proposed method allows for a variable number of bits to code each frame using a
         single model.<br>
         Below, fixed (one mode per bitrate) and variable-bitrate (single model) coding can be compared.<br>
@@ -171,158 +171,117 @@
         the mel-spectrogram) using multiple stages of K-Means residual clustering is included.<br>
         The VQ-baseline and proposed coder each use their own <b>fine-tuned vocoder</b> that has adapted to the distinct mel-spectrogram
         quantization errors of each method.
-    </p>
+    </p> -->
+    <h4> p229</h4>
     <font size="2">
         <table>
             <tr>
                 <th></th>
-                <th>Uncoded</th>
-                <th>VQ-baseline@1.38&thinsp;kbps<br>fine-tuned</th>
-                <th>Proposed@1.38&thinsp;kbps<br>fine-tuned</th>
-                <th>Proposed@1.38&thinsp;kbps<br>fixed (non-fine-tuned)</th>
-                <th>VQ-baseline@2.76&thinsp;kbps<br>fine-tuned</th>
-                <th>Proposed@2.76&thinsp;kbps<br>fine-tuned</th>
-                <th>Proposed@2.76&thinsp;kbps<br>fixed (non-fine-tuned)</th>
-                <th>VQ-baseline@5.51&thinsp;kbps<br>fine-tuned</th>
-                <th>Proposed@5.51&thinsp;kbps<br>fine-tuned</th>
-                <th>Proposed@5.51&thinsp;kbps<br>fixed (non-fine-tuned)</th>
+                <th>HiFiGAN</th>
+                <th>BigVGAN tiny</th>
+                <th>BigVGAN base</th>
             </tr>
 
             <tr>
-                <th align="left" , style="padding-right:20px;"> p229</th>
+                <th align="left" , style="padding-right:20px;"> clean</th>
                 <td><audio controls style="width: 130px;">
-                        <source src="rendered/p229.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p229_vq1.38_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p229_var16bit_finetuned.flac" type="audio/flac">
+                        <source src="files/p237_262_HiFi.wav" type="audio/flac">
                     </audio></td>
                 <td><audio controls style="width: 130px;">
-                        <source src="rendered/p229_fixed16bit.flac" type="audio/flac">
+                        <source src="files/p237_262_bigvgan_tiny.wav" type="audio/flac">
                     </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p229_vq2.76_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p229_var32bit_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p229_fixed32bit.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p229_vq5.51_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p229_var64bit_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p229_fixed64bit.flac" type="audio/flac">
+               <audio controls style="width: 130px;">
+                        <source src="files/p237_262_bigvgan_base.wav" type="audio/flac">
                     </audio></td>
             </tr>
 
             <tr>
-                <th align="left" , style="padding-right:20px;"> p230</th>
+                <th align="left" , style="padding-right:20px;"> 5</th>
                 <td><audio controls style="width: 130px;">
-                        <source src="rendered/p230.flac" type="audio/flac">
+                        <source src="files/p237_262_HiFi_05.wav" type="audio/flac">
                     </audio></td>
                 <td><audio controls style="width: 130px;">
-                        <source src="rendered/p230_vq1.38_finetuned.flac" type="audio/flac">
+                        <source src="files/p237_262_bigvgan_tiny_05.wav" type="audio/flac">
                     </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
+                 <td><audio controls style="width: 130px;">
                         <source src="rendered/p230_var16bit_finetuned.flac" type="audio/flac">
                     </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p230_fixed16bit.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p230_vq2.76_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p230_var32bit_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p230_fixed32bit.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p230_vq5.51_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p230_var64bit_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p230_fixed64bit.flac" type="audio/flac">
-                    </audio></td>
-
             </tr>
 
             <tr>
-                <th align="left" , style="padding-right:20px;"> p232</th>
+                <th align="left" , style="padding-right:20px;"> 10</th>
                 <td><audio controls style="width: 130px;">
-                        <source src="rendered/p232.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p232_vq1.38_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p232_var16bit_finetuned.flac" type="audio/flac">
+                        <source src="files/p237_262_HiFi_10.wav" type="audio/flac">
                     </audio></td>
                 <td><audio controls style="width: 130px;">
-                        <source src="rendered/p232_fixed16bit.flac" type="audio/flac">
+                        <source src="files/p237_262_bigvgan_tiny_10.wav" type="audio/flac">
                     </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p232_vq2.76_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p232_var32bit_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p232_fixed32bit.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p232_vq5.51_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p232_var64bit_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p232_fixed64bit.flac" type="audio/flac">
+                 <td><audio controls style="width: 130px;">
+                        <source src="rendered/p230_var16bit_finetuned.flac" type="audio/flac">
                     </audio></td>
             </tr>
 
+            <tr>
+                <th align="left" , style="padding-right:20px;"> 15</th>
+                <td><audio controls style="width: 130px;">
+                        <source src="files/p237_262_HiFi_05.wav" type="audio/flac">
+                    </audio></td>
+                <td><audio controls style="width: 130px;">
+                        <source src="files/p237_262_bigvgan_tiny_15.wav" type="audio/flac">
+                    </audio></td>
+                 <td><audio controls style="width: 130px;">
+                        <source src="rendered/p230_var16bit_finetuned.flac" type="audio/flac">
+                    </audio></td>
+            </tr>
 
             <tr>
-                <th align="left" , style="padding-right:20px;"> p237</th>
+                <th align="left" , style="padding-right:20px;"> 20</th>
                 <td><audio controls style="width: 130px;">
-                        <source src="rendered/p237.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p237_vq1.38_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p237_var16bit_finetuned.flac" type="audio/flac">
+                        <source src="files/p237_262_HiFi_20.wav" type="audio/flac">
                     </audio></td>
                 <td><audio controls style="width: 130px;">
-                        <source src="rendered/p237_fixed16bit.flac" type="audio/flac">
+                        <source src="files/p237_262_bigvgan_tiny_20.wav" type="audio/flac">
+                    </audio></td>
+                 <td><audio controls style="width: 130px;">
+                        <source src="rendered/p230_var16bit_finetuned.flac" type="audio/flac">
+                    </audio></td>
+            </tr>
+            <tr>
+                <th align="left" , style="padding-right:20px;"> 25</th>
+                <td><audio controls style="width: 130px;">
+                        <source src="files/p237_262_HiFi_25.wav" type="audio/flac">
                     </audio></td>
                 <td><audio controls style="width: 130px;">
-                        <source src="rendered/p237_vq2.76_finetuned.flac" type="audio/flac">
+                        <source src="files/p237_262_bigvgan_tiny_25.wav" type="audio/flac">
                     </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p237_var32bit_finetuned.flac" type="audio/flac">
+                 <td><audio controls style="width: 130px;">
+                        <source src="rendered/p230_var16bit_finetuned.flac" type="audio/flac">
+                    </audio></td>
+            </tr>
+
+            <tr>
+                <th align="left" , style="padding-right:20px;"> 35</th>
+                <td><audio controls style="width: 130px;">
+                        <source src="files/p237_262_HiFi_35.wav" type="audio/flac">
                     </audio></td>
                 <td><audio controls style="width: 130px;">
-                        <source src="rendered/p237_fixed32bit.flac" type="audio/flac">
+                        <source src="files/p237_262_bigvgan_tiny_35.wav" type="audio/flac">
+                    </audio></td>
+                 <td><audio controls style="width: 130px;">
+                        <source src="rendered/p230_var16bit_finetuned.flac" type="audio/flac">
+                    </audio></td>
+            </tr>
+
+            <tr>
+                <th align="left" , style="padding-right:20px;"> 45</th>
+                <td><audio controls style="width: 130px;">
+                        <source src="files/p237_262_HiFi_45.wav" type="audio/flac">
                     </audio></td>
                 <td><audio controls style="width: 130px;">
-                        <source src="rendered/p237_vq5.51_finetuned.flac" type="audio/flac">
+                        <source src="files/p237_262_bigvgan_tiny_45.wav" type="audio/flac">
                     </audio></td>
-                <td style="background-color: grey;"><audio controls style="width: 130px;">
-                        <source src="rendered/p237_var64bit_finetuned.flac" type="audio/flac">
-                    </audio></td>
-                <td><audio controls style="width: 130px;">
-                        <source src="rendered/p237_fixed64bit.flac" type="audio/flac">
+                 <td><audio controls style="width: 130px;">
+                        <source src="rendered/p230_var16bit_finetuned.flac" type="audio/flac">
                     </audio></td>
             </tr>
 
